@@ -1,0 +1,227 @@
+/*Universal selector*/
+* {
+  margin: 0;
+  padding: 0;
+
+  /*border-top:10px solid #1098ad
+it'll apply the blue solid overline to all the text*/
+}
+/*PAGE SECTION*/
+body {
+  color: #444;
+  font-family: sans-serif;
+
+  border-top: 10px solid #1098ad;
+  position: relative;
+}
+.container {
+  width: 800px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin: 0 auto;
+}
+article {
+  margin-bottom: 60px;
+}
+.post-image {
+  width: 100%;
+  height: auto;
+}
+.related {
+  background-color: #cec3c3;
+
+  /*Padding
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;*/
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  /*height: 80px;*/
+}
+.border {
+  margin-top: 40px;
+  background-color: antiquewhite;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px; /*width is used to decrease the space taken by the texts*/
+}
+nav {
+  font-size: 18px;
+}
+/*SMALLER ELEMENTS*/
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+
+  /*font-style: italic;
+  
+  font-size=increases the size of the sentence
+  font-family=The font-family property specifies the font for an element
+  text-transform= set the font in uppercase
+  font-style= changes the style of the font
+  text-align=you can align the text at start,center and end
+  */
+}
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+h3 {
+  font-size: 25;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+h4 {
+  font-size: 23;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+.post-related {
+  margin-bottom: 40px;
+}
+p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 1.1; /*space between the lines*/
+}
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  /*display:inline*/
+}
+li:last-child {
+  margin-bottom: 0;
+}
+/*We use "." for class and "#" for id */
+.related-author {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+/*footer p {
+  font-size: 10px;
+}*/
+/*Resolving conflicts between selectors*/
+#copyright {
+  font-size: 10px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.copyright-text {
+  font-size: 30px;
+  font-style: italic;
+}
+/* article header p{
+font-style:italic;
+}*/
+#author {
+  font-size: 18px;
+  font-style: italic;
+  margin: 15px 0;
+}
+.bullet-points {
+  list-style: none;
+}
+
+/*In practice we mostly use hexadecimal colors, and rgba when we need transparency*/
+
+/*Pseudo Elements
+It changes the style of the single letters
+A Sibling element is basically a element that is part of the same parent*/
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+/*p::first-line {
+  color: red;
+}
+h3 + p::first-line {
+  color: red;
+  it'll select the first paragraph of h3 and make it red
+}
+*/
+li:first-child {
+  font-weight: bold;
+}
+/*
+first-child,last-child and nth-child are the attributes which are used to set the styling of the text....
+li:last-child {
+  font-style: italic;
+}
+li:nth-child(3) {
+  color: red;
+}
+*/
+/*Styling links
+a:link will target actual links with href*/
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+a:visited {
+  /* visited keeps the link color intact*/
+  color: #1098ad;
+}
+a:hover {
+  /* On visiting the kink the color changes to the given color of the link*/
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+a:active {
+  /*This is the state in which we are actually clicking and the color and the font changes*/
+  background-color: gray;
+  font-style: italic;
+}
+/*Inheritance is the mechanism by which some styles or some propertes get their values inherited from parent elements to child elements*/
+nav a:link {
+  /* background-color: white;
+  margin: 20px;
+  padding: 20px;
+  display: block; verical representation of links*/
+  margin-right: 30px;
+  margin-top: 20px;
+  display: inline-block; /*used to give space to the links*/
+}
+nav a:link:last-child {
+  margin-right: 0;
+}
+.button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+/*After and Before Pseudo elements*/
+h2 {
+  position: relative;
+  /*never forget relative positioning for the parent element*/
+}
+h2::after {
+  content: "TOP";
+  font-size: 10px;
+  background-color: #ffe70e;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
